@@ -427,7 +427,7 @@
         {
           "name": "current_frame",
           "type": "INT",
-          "link": null
+          "link": 1284
         },
         {
           "name": "pre_text",
@@ -1680,7 +1680,7 @@
         {
           "name": "current_frame",
           "type": "INT",
-          "link": null
+          "link": 1283
         },
         {
           "name": "pre_text",
@@ -2174,7 +2174,10 @@
           "name": "INT",
           "type": "INT",
           "slot_index": 1,
-          "links": null
+          "links": [
+            1283,
+            1284
+          ]
         },
         {
           "name": "LATENT",
@@ -4652,6 +4655,22 @@
       667,
       0,
       "IMAGE"
+    ],
+    [
+      1283,
+      548,
+      1,
+      541,
+      1,
+      "INT"
+    ],
+    [
+      1284,
+      548,
+      1,
+      543,
+      1,
+      "INT"
     ]
   ],
   "groups": [
