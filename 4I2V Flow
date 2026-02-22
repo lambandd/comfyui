@@ -1,7 +1,7 @@
 {
   "id": "f55d3caa-f17e-4410-9849-e3bdfb243709",
   "revision": 0,
-  "last_node_id": 795,
+  "last_node_id": 796,
   "last_link_id": 1710,
   "nodes": [
     {
@@ -897,7 +897,7 @@
           ]
         }
       ],
-      "title": "Motion Scale 🎭🅐🅓",
+      "title": "Motion Scale \ud83c\udfad\ud83c\udd50\ud83c\udd53",
       "properties": {
         "cnr_id": "comfyui-animatediff-evolved",
         "ver": "90fb1331201a4b29488089e4fbffc0d82cc6d0a9",
@@ -3874,6 +3874,29 @@
       },
       "color": "#222",
       "bgcolor": "#000"
+    },
+    {
+      "id": 796,
+      "type": "Note",
+      "pos": [
+        930,
+        520
+      ],
+      "size": [
+        520,
+        300
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Note"
+      },
+      "widgets_values": [
+        "High-level orchestration is now external via build_4i2v_segment_workflow.py\n\nInputs: start-image, end-image, motion (zoom/rotate_left/rotate_right/up/down), quality (sample/full).\n\nWorkflow behavior:\n- maps images as start/start/end/end\n- swaps motion video preset per motion\n- tunes ControlNet + motion scale presets\n- sample = preview output only\n- full = final output only\n\nUse it per photo pair, then concatenate clips for long videos."
+      ]
     }
   ],
   "links": [
