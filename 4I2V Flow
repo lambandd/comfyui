@@ -3895,7 +3895,7 @@
         "Node name for S&R": "Note"
       },
       "widgets_values": [
-        "High-level orchestration is now external via build_4i2v_segment_workflow.py\n\nInputs: start-image, end-image, motion (zoom/rotate_left/rotate_right/up/down), quality (sample/full).\n\nWorkflow behavior:\n- maps images as start/start/end/end\n- swaps motion video preset per motion\n- tunes ControlNet + motion scale presets\n- sample = preview output only\n- full = final output only\n\nUse it per photo pair, then concatenate clips for long videos."
+        "Camera motion + consistency tuning (recommended):\n\n1) Keep consistency first: IPAdapter weights 0.85-1.0, CFG 1.0-1.5, fixed seed once preview looks good.\n2) For stronger perspective, swap the ring-mask video with directional masks (zoom-in, tilt-up, pan-left) and raise ControlNet strength to ~0.55-0.7.\n3) Use per-image movement by rendering each photo as its own short clip (8-24f), each with its own mask video, then concatenate clips.\n4) Practical presets:\n   - Zoom in: radial gradient / expanding circles, strength 0.55, end 0.45\n   - Rotate up: vertical flow/tilt mask, strength 0.60, end 0.55\n   - Rotate left: horizontal flow mask, strength 0.60, end 0.55\n5) Keep motion scale modest (1.05-1.25) to avoid wobble; increase only after perspective is stable."
       ]
     }
   ],
