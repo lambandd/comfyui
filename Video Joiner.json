@@ -605,7 +605,7 @@
               "Node name for S&R": "VHS_SplitImages"
             },
             "widgets_values": {
-              "split_index": 5
+              "split_index": 9
             }
           },
           {
@@ -1028,7 +1028,7 @@
             },
             "widgets_values": [
               "rife47.pth",
-              8,
+              10,
               2,
               true,
               true,
@@ -2386,7 +2386,7 @@
                 ]
               }
             ],
-            "title": "Motion Scale 🎭🅐🅓",
+            "title": "Motion Scale \ud83c\udfad\ud83c\udd50\ud83c\udd53",
             "properties": {
               "cnr_id": "comfyui-animatediff-evolved",
               "ver": "90fb1331201a4b29488089e4fbffc0d82cc6d0a9",
@@ -2683,7 +2683,7 @@
               }
             },
             "widgets_values": [
-              "To keep the look closer to original images you can increase the weights of ipadapters and/or change to ipadapter Plus model in the Unified Loader node."
+              "Safe seam preset: Transition Boundary Frames = 9, transition length = 32f, endpoint IPAdapter weights remain 1.0. If seam persists, try IPAdapter 1.15-1.25 and/or switch Unified Loader to PLUS."
             ],
             "color": "#432",
             "bgcolor": "#653"
@@ -4643,7 +4643,7 @@
             "widgets_values": [
               512,
               288,
-              20
+              32
             ],
             "color": "#232",
             "bgcolor": "#353"
