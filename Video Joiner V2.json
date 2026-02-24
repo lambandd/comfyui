@@ -605,7 +605,7 @@
               "Node name for S&R": "VHS_SplitImages"
             },
             "widgets_values": {
-              "split_index": 12
+              "split_index": 16
             }
           },
           {
@@ -894,7 +894,7 @@
               "Node name for S&R": "DF_Integer"
             },
             "widgets_values": [
-              1
+              16
             ]
           },
           {
@@ -1301,7 +1301,7 @@
               }
             },
             "widgets_values": [
-              "Video Joiner V2 uses an AnimateDiff-guided transition for better motion consistency. It takes the last ~8-16 frames from Video A and first ~8-16 frames from Video B, generates a bridge clip with low denoise, then blends back into full clips. Tune Transition Boundary Frames (default 12) and RIFE multipliers for your scene."
+              "V2 boundary loading (default): last 16 frames of Video A + first 16 frames of Video B are fed into AnimateDiff/IPAdapter. How it works: DF_Integer=16, then (A frame_count - 16) drives VHS_SplitImages on Video A and the tail output goes to AnimateDiff input A; VHS_SplitImages split_index=16 on Video B sends the head output to AnimateDiff input B. ControlNet and IPAdapter masks then blend A->B across the bridge."
             ],
             "color": "#432",
             "bgcolor": "#653"
@@ -2683,7 +2683,7 @@
               }
             },
             "widgets_values": [
-              "AnimateDiff guided transition preset (V2): boundary frames = 12, transition length = 24f, low denoise = 0.35, ControlNet strength 0.50 -> 0.30. For clips with stronger motion, try 16 boundary frames and 32f transition."
+              "AnimateDiff guided transition preset (V2): 16+16 boundary frames, transition length = 32f, low denoise = 0.35, ControlNet strength 0.50 -> 0.30. If motion is mild, reduce boundary to 8-12 and transition to 24f."
             ],
             "color": "#432",
             "bgcolor": "#653"
@@ -4549,9 +4549,9 @@
               }
             },
             "widgets_values": [
-              "0:(1.0),\n15:(0.0)",
+              "0:(1.0),\n31:(0.0)",
               false,
-              20,
+              32,
               512,
               512,
               "linear"
@@ -4595,9 +4595,9 @@
               }
             },
             "widgets_values": [
-              "0:(0.0),\n10:(0.0),\n20:(1.0)",
+              "0:(0.0),\n15:(0.0),\n31:(1.0)",
               false,
-              20,
+              32,
               512,
               512,
               "linear"
@@ -4643,7 +4643,7 @@
             "widgets_values": [
               512,
               288,
-              24
+              32
             ],
             "color": "#232",
             "bgcolor": "#353"
